@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Linking Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/transaction.css">
+
+    <title>Movies Unlimited</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default navStyle navbarStyle">
+        <ul class="nav navbar-nav navList">
+            <li class="col-sm-4" style="">
+                <a id="go_home" href="#"><img src="images/Movies-Unlimited-logo.png"  alt="Logo " class="logo" /></a>
+            </li>
+            <li class="col-sm-4" style="">
+            </li>
+            <li class="col-sm-4">
+                <div class="row col3">
+                    <div class="col-sm-6"><a id="logout_button" href="#">Logout</a></div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!--Container-->
+    <div class="container checkout">
+        <h3>Order History</h3>
+        <div class="row">
+            <div class="col-sm-12 table-responsive">
+                <table class="table table-bordered table-striped" id="transaction_container">
+                    <thead>
+                        <tr>
+                            <th> Transaction #</th>
+                            <th> Date</th>
+                            <th> Address</th>
+                            <th> Total Price</th>
+                            <th> Payment Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeModal">&times;</span>
+                <h2>Transaction Details</h2>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 table-responsive" id="details_table">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th> Title</th>
+                                        <th> Price</th>
+                                        <th> Quantity</th>
+                                        <th> Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="js/transaction.js"></script>
+</body>
+</html>

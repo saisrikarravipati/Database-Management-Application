@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Linking Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <title>Movies Unlimited</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="collage">
+            <img src="images/Movies-Unlimited-logo.png"  alt="Logo" class="logo" />
+            <!-- Login -->
+            <div class="login">
+                <img src="images/maroon-clapper.jpg"  alt="login image" class="login_logo">
+                <h2 style="color:darkred">LOGIN</h2>
+                <form class="login_form">
+                    <div id="register_success">User registered. Log in to continue.</div>
+                    <div id="login_fail">Wrong email or password.</div>
+                    <input type="text" name="email" id="email" placeholder="Email">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <input type="button" value="Login" id="login"></input>
+                </form>
+                <a href="#" id="register_link">Not registered yet? Click to Register</a>
+            </div>
+
+            <!--Register -->
+            <div class="register" style="margin-top:8px">
+                <img src="images/maroon-clapper.jpg" alt="login image" class="register_logo">
+                <h3 style="color:maroon">REGISTER</h3>
+                <form class="register_form">
+                    <div id="register_fail">Unable to register user.</div>
+                    <table>
+                        <tr><td><input type="text" name="firstname" class="reg_input" id="firstname" placeholder="First Name"></td></tr>
+                        <tr><td><input type="text" name="lastname" class="reg_input" id="lastname" placeholder="Last Name"></td></tr>
+                        <tr><td><input type="email" name="email" class="reg_input" id="remail" placeholder="Email"></td></tr>
+                        <tr><td><input type="phone" name="phone" class="reg_input" id="phone" placeholder="Phone"></td></tr>
+                        <tr><td><input type="password" name="rpassword" class="reg_input" id="rpassword" placeholder="Password"></td></tr>
+                        <tr><td><meter max="4" id="password-strength-meter" value="0"></meter></td></tr>
+                        <tr><td><p id="password-strength-text"></p></td></tr>
+                        <tr><td><input type="password" name="cpassword" class="reg_input" id="cpassword" placeholder="Confirm Password"></td></tr>
+                    </table>
+                    <input type="button" value="Register" id="register"></input>
+                    <input type="button" value="Back to Login" id="back_to_login"></input>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linking Stylesheets -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

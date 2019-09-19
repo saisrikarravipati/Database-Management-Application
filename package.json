@@ -1,0 +1,40 @@
+{
+  "name": "moviesunlimited",
+  "version": "1.0.0",
+  "description": "A Web Application simulating an Online Movie Store.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js"
+  },
+
+  "keywords": [
+    "node",
+    "mongodb",
+    "html",
+    "css",
+    "jquery",
+    "restful",
+    "services",
+    "web",
+    "online",
+    "movie",
+    "store"
+  ],
+  "author": "Divya Tyagi",
+  "license": "ISC",
+  "bugs": {
+
+  },
+  
+  "dependencies": {
+    "bcrypt": "^3.0.5",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongodb": "^3.2.2",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

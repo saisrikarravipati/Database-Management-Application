@@ -1,0 +1,10 @@
+{
+    "env": {
+        "port": 8080,
+        "db_url": "localhost:27017",
+        "db_database": "moviedb",
+        "app_secret": "bIkEDYs2Qd7Maj9zdRLS",
+        "app_timeout": 1800,
+        "page_size": 5
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <!-- Metadata -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Linking Stylesheets -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="css/checkout.css">
+
+        <title>Movies Unlimited</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-default navStyle navbarStyle">
+            <ul class="nav navbar-nav navList">
+                <li class="col-sm-4">
+                    <a id="go_home" href="#"><img src="images/Movies-Unlimited-logo.png"  alt="Logo " class="logo" /></a>
+                </li>
+                <li class="col-sm-4" style="">
+                </li>
+                <li class="col-sm-4">
+                    <div class="row col3">
+                        <div class="col-sm-6"><a id="logout_button" href="#">Logout</a></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Container-->
+        <div class="container checkout">
+            <h3>Checkout Movie List</h3>
+            <div class="row">
+                <div class="col-sm-12 table-responsive">
+                    <table id="cart_items" class="table table-bordered table-striped checkout_table">
+                        <thead>
+                            <tr>
+                                <th> No. </th>
+                                <th> Movie Title</th>
+                                <th> Quantity </th>
+                                <th> Price </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active" ><div class="total">Final Payment <span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span><span id="total_price">4200</span></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- payment-->
+            <div class="row payment">
+                <div class="col-sm-12 ">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Payment Details
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="cardNumber">CARD NUMBER</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required="" autofocus="">
+                                        <span class="input-group-addon"></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-5 col-md-5">
+                                        <div class="form-group">
+                                            <div class="col-xs-5 col-lg-5 pl-ziro">
+                                                <label for="expityMonth">EXPIRY MONTH</label>
+                                                <input type="text" class="form-control" id="expityMonth" placeholder="MM" required="">
+                                            </div>
+                                            <div class="col-xs-5 col-lg-5 pl-ziro">
+                                                <label for="expityyear">EXPIRY YEAR</label>
+                                                <input type="text" class="form-control" id="expityYear" placeholder="YYYY" required="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5 col-md-5 pull-right">
+                                        <div class="form-group">
+                                            <label for="cvCode">CVV CODE</label>
+                                            <input type="password" class="form-control" id="cvCode" placeholder="CVV" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="billAddress">BILLING ADDRESS</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="billAddress" placeholder="Billing address" required="" autofocus="">
+                                        <span class="input-group-addon"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <button id="confirm_payment" class="btn btn-success btn-lg btn-block" role="button">Confirm Payment</button>
+                    <button id="back_to_main" class="btn btn-success btn-lg btn-block" role="button">Back to Main Page</button>
+                </div>
+            </div>
+        </div>
+
+        <!--processing tinted page layout-->
+        <div class="processing hide">
+            <h1 class="head">Processing Transaction</h1>
+            <div class="loader"></div>
+        </div>
+
+        <!--transaction successful page-->
+        <div class="success hide">
+            <h1></h1>
+            <h4> To continue shopping <span> <a href="#" id="click_here"> click here </a> </span> </h4>
+        </div>
+
+        <!-- Popup message -->
+        <div id="pop-up-message">
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="js/checkout.js"></script>
+    </body>
+</html>

@@ -1,0 +1,209 @@
+<html>
+
+<head lang="en">
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Linking Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/mainpage.css">
+
+    <title>Movies Unlimited</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default navStyle navbarStyle">
+        <ul class="nav navbar-nav navList">
+            <li class="col-sm-4" style="">
+                <a id="go_home" href="#"><img src="images/Movies-Unlimited-logo.png "  alt="Logo " class="logo" /></a>
+            </li>
+            <li class="col-sm-4">
+                <input type="text" id="search"></input>
+                <a href="#" id="search_btn" id-"search_btn">
+                    <span class="glyphicon glyphicon-search search_icon"></span>
+                </a>
+                <button type="button" class="new_video" id="add_video" data-toggle="modal_edit" data-target="#edit_modal">ADD NEW VIDEO </button>
+            </li>
+            <li class="col-sm-4">
+                <div class="row col3">
+                    <div class="col-sm-2">
+                        <a id="goto_transactions" href="#">
+                            <span class="glyphicon glyphicon-user user_icon"></span>
+                        </a>
+                    </div>
+                    <div class="col-sm-2 cart" >
+                        <span class="no_of_items" >0</span>
+                        <a id="cart-popover" class="btn" data-toggle="popover" data-placement="bottom" title="Shopping Cart">
+                            <span class="glyphicon glyphicon-shopping-cart user_icon" id="cart_icon" data-toggle="modal">
+                                <a href="#" data-toggle="popover" title="Popover Header" data-target="#myCart" data-placement="bottom" data-content="Some content inside the popover" class="cart"></a></span>
+                            </a>
+                        </div>
+                        <div class="col-sm-4"><a id="logout_button" href="#">Logout</a></div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!--cart popover-->
+        <div id="popover_content_wrapper" style="display: none">
+            <div id="cart_details" class="table-responsive">
+                <table class="table table-bordered" id="cart_table">
+                    <thead>
+                        <tr><th> Movie Title </th><th> Quantity </th><th> Price </th><th> Action </th></tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="cart_footer" align="right">
+                <a href="#" class="btn btn-primary" id="check_out_cart">
+                    <span class="glyphicon glyphicon-shopping-cart"></span> Check out
+                </a>
+                <a href="#" class="btn btn-default" id="clear_cart">
+                    <span class="glyphicon glyphicon-trash"></span> Clear
+                </a>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="container">
+            <div class="row row_container">
+                <!-- left filter panel-->
+                <div class="col-sm-2 filter_pane">
+                    <h3>FILTER <span class="glyphicon glyphicon-filter filter_icon" id="filter"> </span></h3>
+                    <div class="genre_filter" data-field="Genre">
+                        <h4>GENRE</h4>
+                    </div>
+                    <div class="ratings_filter" data-field="Rated">
+                        <h4>RATED</h4>
+                    </div>
+                    <div class="lang_filter" data-field="Language">
+                        <h4>LANGUAGE</h4>
+                    </div>
+
+                    <div class="countries_filter" data-field="Country">
+                        <h4>COUNTRY</h4>
+                    </div>
+
+                    <h3> SORT BY <span class="glyphicon glyphicon-sort filter_icon"></span></h3>
+                    <div class="sort_by">
+                        <div><input type="radio" name="sort" value="price_ascend" data-field="Price" data-order="1"><span>Price Low to High</span></div>
+                        <div><input type="radio" name="sort" value="price_descend" data-field="Price" data-order="-1"><span>Price High to Low</span></div>
+                        <div><input type="radio" name="sort" value="rating_ascend" data-field="Ratings" data-order="1"><span>Rating Low to High</span></div>
+                        <div><input type="radio" name="sort" value="rating_descend" checked="checked" data-field="Ratings" data-order="-1"><span>Rating High to Low</span></div>
+                        <div><input type="radio" name="sort" value="title_ascend" data-field="Title" data-order="1"><span>Title A-Z</span></div>
+                        <div><input type="radio" name="sort" value="title_descend" data-field="Title" data-order="-1"><span>Title Z-A</span></div>
+                        <div><input type="radio" name="sort" value="year_ascend" data-field="Year" data-order="1"><span>Year Low to High</span></div>
+                        <div><input type="radio" name="sort" value="year_descend" data-field="Year" data-order="-1"><span>Year High to Low</span></div>
+                    </div>
+                </div>
+                <!-- right movies content panel-->
+                <div class="col-sm-10 right_pane">
+                    <div class="row">
+                        <div class="col-md-12 content">
+                        </div>
+                    </div>
+                    <div id="pagination_footer" class="row">
+                        <div class="col-sm-12">
+                            <p class="page">
+                                <a href="#" id="prev_page">Previous</a>&nbsp;&nbsp;
+                                Page: <span id="page_num">1</span> of <span id="page_total">50</span>&nbsp;&nbsp;
+                                <a href="#" id="next_page">Next</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div><!--row-->
+
+            <!-- The Modal for know_more btn -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog m_dialog">
+                    <div class="modal-content knowmore_content">
+
+                        <!-- Modal Header for know_more btn  -->
+                        <div class="modal-header m_header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title m_title">Title</h2>
+                        </div>
+                        <!-- Modal body for know_more btn  -->
+                        <div class="modal-body m_body row">
+                            <div class="col-sm-4 left_col ">
+                                <img src="images/clapper_login.png" alt="movie_image" style="width:100%; border-radius:20px; height:50%"/>
+                                <p><b>PRICE : </b> <span id="price_modal">0$</span> </p>
+                                <p><b>STOCK : </b><span id="stock_modal"> 10 </span></p>
+                                <button type="button" id="addToCart" class="addToCart_btn">ADD TO CART</button>
+                            </div>
+                            <div class="col-sm-8 right_col">
+                                <table class="modal_desc ">
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Modal footer for know_more btn -->
+                        <div class="modal-footer m_footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Modal for edit_movie btn -->
+            <!-- Modal -->
+            <div class=" modal modal_edit fade" id="myEditModal" role="dialog">
+              <div class="modal-dialog m_dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content edit_content" data-id = "">
+                  <div class="modal-header m_header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add a new Movie</h4>
+                  </div>
+                  <div class="modal-body m_body">
+                      <table align="center" class="edit_table">
+                      </table>
+                  </div>
+                  <div class="modal-footer m_footer">
+                    <button type="button" class="btn btn-default" id="edit_confirm">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- The Modal for delete_movie btn -->
+            <div class=" modal modal_delete fade" id="myDeleteModal" role="dialog">
+                <div class="modal-dialog d_dialog">
+                  <div class="modal-content del_content" date-id="">
+                    <h4> Are you sure you want to delete the movie ?</h4>
+                    <button type="button" class="btn btn-default" id="delete_yes">YES</button>
+                    <button type="button" class="btn btn-default" id="no" data-dismiss="modal">NO</button>
+                  </div>
+                </div>
+            </div>
+
+        </div><!--container-->
+
+        <!--processing tinted page layout-->
+        <div id="loading" class="processing hide">
+            <h1 class="head">Loading...</h1>
+            <div class="loader"></div>
+        </div>
+
+        <!-- Popup message -->
+        <div id="pop-up-message">
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="js/mainpage.js"></script>
+    </body>
+</html>
