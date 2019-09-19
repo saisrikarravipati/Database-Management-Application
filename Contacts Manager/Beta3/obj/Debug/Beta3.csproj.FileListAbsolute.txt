@@ -1,0 +1,20 @@
+C:\Users\Srikar\source\repos\Beta3\Beta3\bin\Debug\Beta3.exe.config
+C:\Users\Srikar\source\repos\Beta3\Beta3\bin\Debug\Beta3.exe
+C:\Users\Srikar\source\repos\Beta3\Beta3\bin\Debug\Beta3.pdb
+C:\Users\Srikar\source\repos\Beta3\Beta3\obj\Debug\Beta3.csprojAssemblyReference.cache
+C:\Users\Srikar\source\repos\Beta3\Beta3\obj\Debug\Beta3.Form1.resources
+C:\Users\Srikar\source\repos\Beta3\Beta3\obj\Debug\Beta3.Properties.Resources.resources
+C:\Users\Srikar\source\repos\Beta3\Beta3\obj\Debug\Beta3.csproj.GenerateResource.cache
+C:\Users\Srikar\source\repos\Beta3\Beta3\obj\Debug\Beta3.csproj.CoreCompileInputs.cache
+C:\Users\Srikar\source\repos\Beta3\Beta3\obj\Debug\Beta3.exe
+C:\Users\Srikar\source\repos\Beta3\Beta3\obj\Debug\Beta3.pdb
+C:\Users\sravi\Desktop\Sem 1\DB Design\Assignments\4\Beta3\Beta3\Beta3\bin\Debug\Beta3.exe.config
+C:\Users\sravi\Desktop\Sem 1\DB Design\Assignments\4\Beta3\Beta3\Beta3\bin\Debug\Beta3.exe
+C:\Users\sravi\Desktop\Sem 1\DB Design\Assignments\4\Beta3\Beta3\Beta3\bin\Debug\Beta3.pdb
+C:\Users\sravi\Desktop\Sem 1\DB Design\Assignments\4\Beta3\Beta3\Beta3\obj\Debug\Beta3.csprojAssemblyReference.cache
+C:\Users\sravi\Desktop\Sem 1\DB Design\Assignments\4\Beta3\Beta3\Beta3\obj\Debug\Beta3.Form1.resources
+C:\Users\sravi\Desktop\Sem 1\DB Design\Assignments\4\Beta3\Beta3\Beta3\obj\Debug\Beta3.Properties.Resources.resources
+C:\Users\sravi\Desktop\Sem 1\DB Design\Assignments\4\Beta3\Beta3\Beta3\obj\Debug\Beta3.csproj.GenerateResource.cache
+C:\Users\sravi\Desktop\Sem 1\DB Design\Assignments\4\Beta3\Beta3\Beta3\obj\Debug\Beta3.csproj.CoreCompileInputs.cache
+C:\Users\sravi\Desktop\Sem 1\DB Design\Assignments\4\Beta3\Beta3\Beta3\obj\Debug\Beta3.exe
+C:\Users\sravi\Desktop\Sem 1\DB Design\Assignments\4\Beta3\Beta3\Beta3\obj\Debug\Beta3.pdb
