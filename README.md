@@ -1,5 +1,5 @@
 /******************************************************************************
-* Conatact Managing Program.
+* Contact Managing Program.
 * 
 * This program keeps a track of all the contacts you encounter in the life
 * 
